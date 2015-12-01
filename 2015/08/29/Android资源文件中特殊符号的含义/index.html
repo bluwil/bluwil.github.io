@@ -1,0 +1,400 @@
+
+	<!DOCTYPE HTML>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  
+    <title>Android资源文件中特殊符号的含义 | Bluwil的博客</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=3, minimum-scale=1">
+    
+    <meta name="author" content="bluwil">
+    
+    <meta name="description" content="@ 代表引用资源引用自定义资源
+格式：@[package:]type/name```android:text=”@String/hello”
+
+## 引用系统资源
+&amp;gt; **格式：@android:type/name**
+android:textColor=”@android:color/opa">
+    
+    
+    
+    
+    
+    <link rel="icon" href="/img/favicon.ico">
+    
+    
+    <link rel="apple-touch-icon" href="/img/pacman.jpg">
+    <link rel="apple-touch-icon-precomposed" href="/img/pacman.jpg">
+    
+    <link rel="stylesheet" href="/css/style.css" type="text/css">
+</head>
+
+
+		<body>
+			<header>
+				<div>
+		
+			<div id="imglogo">
+				<a href="/"><img src="/img/logo.svg" alt="Bluwil的博客" title="Bluwil的博客"/></a>
+			</div>
+			
+			<div id="textlogo">
+				<h1 class="site-name"><a href="/" title="Bluwil的博客">Bluwil的博客</a></h1>
+				<h2 class="blog-motto">路在脚下。</h2>
+			</div>
+			<div class="navbar"><a class="navbutton navmobile" href="#" title="菜单">
+			</a></div>
+			<nav class="animated">
+				<ul>
+					
+						<li><a href="/">主页</a></li>
+					
+						<li><a href="/archives">归档</a></li>
+					
+						<li><a href="/about">关于</a></li>
+					
+					<li>
+					
+					<form class="search" action="//google.com/search" method="get" accept-charset="utf-8">
+						<label>Search</label>
+						<input type="text" id="search" name="q" autocomplete="off" maxlength="20" placeholder="搜索" />
+						<input type="hidden" name="q" value="site:bluwil.github.io">
+					</form>
+					
+					</li>
+				</ul>
+			</nav>			
+</div>
+
+			</header>
+			<div id="container">
+				<div id="main" class="post" itemscope itemprop="blogPost">
+	<article itemprop="articleBody"> 
+		<header class="article-info clearfix">
+  <h1 itemprop="name">
+    
+      <a href="/2015/08/29/Android资源文件中特殊符号的含义/" title="Android资源文件中特殊符号的含义" itemprop="url">Android资源文件中特殊符号的含义</a>
+  </h1>
+  <p class="article-author">By
+    
+      <a href="http://bluwil.github.io" title="bluwil">bluwil</a>
+    </p>
+  <p class="article-time">
+    <time datetime="2015-08-29T10:38:06.000Z" itemprop="datePublished">2015-08-29</time>
+    更新日期:<time datetime="2015-11-29T17:27:24.391Z" itemprop="dateModified">2015-11-30</time>
+    
+  </p>
+</header>
+	<div class="article-content">
+		
+		
+		<div id="toc" class="toc-article">
+			<strong class="toc-title">文章目录</strong>
+		<ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#@_代表引用资源"><span class="toc-number">1.</span> <span class="toc-text">@ 代表引用资源</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#引用自定义资源"><span class="toc-number">1.1.</span> <span class="toc-text">引用自定义资源</span></a></li></ol></li></ol>
+		</div>
+		
+		<h1 id="@_代表引用资源">@ 代表引用资源</h1><h2 id="引用自定义资源">引用自定义资源</h2><blockquote>
+<p><strong>格式：@[package:]type/name</strong><br>```<br>android:text=”@String/hello”</p>
+</blockquote>
+<pre><code>## 引用系统资源
+&gt; **格式：@android:type/name**
+</code></pre><p>android:textColor=”@android:color/opaque_red”</p>
+<pre><code>&gt; &lt;font color = &quot;red&quot;&gt;*注意：其实@android:type/name是@[package:]type/name的一种类型 *&lt;/font&gt;
+
+# @* 代表引用系统的非public资源
+&gt;** 格式:@*android:type/name ** 
+
+- 系统资源定义分public和非public。
+- public的声明在&lt;sdk_path&gt;\platforms\android-21\data\res\values\public.xml里面
+- @*android:type/name:可以调用系统定义的资源
+- @android:type/name:只能调用public属性中声明的资源
+&gt; &lt;font color = &quot;red&quot;&gt;*注意：没在public.xml中声明的资源是Google不推荐使用的*&lt;/font&gt;
+
+## ？表示引用主题属性 
+另外一种资源值允许你引用当前主题中的属性的值。这个属性值只能在style资源和XML属性中使用，它允许你通过将它们改变为当前主题提供的标准变化来改变UI元素的外观，而不是提供具体的值。例如：
+`android:textColor=&quot;?android:textDisabledColor&quot;` 
+
+&gt;&lt;font color = &quot;red&quot;&gt;*注意，这和资源引用非常类似，除了我们使用一个&quot;?&quot;前缀代替了&quot;@&quot;。当你使用这个标记时，你就提供了属性资源的名称，它将会在主题中被查找，所以你不需要显示声明这个类型(如果声明，其形式就是?android:attr/android:textDisabledColor)。除了使用这个资源的标识符来查询主题中的值代替原始的资源，其命名语法和&quot;@&quot;形式一致：?[namespace:]type/name，这里类型可选。 &lt;/font&gt;
+
+# @+代表在创建或引用资源 
+&gt; **格式：@+type/name #**
+
+含义：”+”表示在R.java中名为type的内部类中添加一条记录。如&quot;@+id/button&quot;的含义是在R.java 文件中的id 这个静态内部类添加一条常量名为button。该常量就是该资源的标识符。如果标示符（包括系统资源）已经存在则表示引用该标示符。最常用的就是在定义资源ID中，例如：
+
+ &gt;@+id/资源ID名  ：新建一个资源ID
+ @id/资源ID名：应用现有已定义的资源ID，包括系统ID
+ @android:id/资源ID名：引用系统ID，其等效于@id/资源ID名
+
+ &gt;
+</code></pre><p> android:id=”@+id/selectdlg”<br> android:id=”@android:id/text1”<br> android:id=”@id/button3”<br>```</p>
+  
+	</div>
+		<footer class="article-footer clearfix">
+
+  <div class="article-tags">
+  
+  <span></span> <a href="/tags/Android/">Android</a>
+  </div>
+
+
+<div class="article-categories">
+  <span></span>
+  <a class="article-category-link" href="/categories/Android基础/">Android基础</a>
+</div>
+
+
+
+<div class="article-share" id="share">
+
+  <div data-url="http://bluwil.github.io/2015/08/29/Android资源文件中特殊符号的含义/" data-title="Android资源文件中特殊符号的含义 | Bluwil的博客" data-tsina="bluwil" class="share clearfix">
+  </div>
+
+</div>
+</footer>   	       
+	</article>
+	
+<nav class="article-nav clearfix">
+ 
+ <div class="prev" >
+ <a href="/2015/09/29/国内Android开发牛人/" title="国内Android开发牛人">
+  <strong>PREVIOUS:</strong><br/>
+  <span>
+  国内Android开发牛人</span>
+</a>
+</div>
+
+
+</nav>
+
+	
+<section class="comment">
+	<div class="ds-thread"></div>
+</section>
+
+</div>  
+					<div class="openaside"><a class="navbutton" href="#" title="显示侧边栏"></a></div>
+
+  <div id="toc" class="toc-aside">
+  <strong class="toc-title">文章目录</strong>
+  <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#@_代表引用资源"><span class="toc-number">1.</span> <span class="toc-text">@ 代表引用资源</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#引用自定义资源"><span class="toc-number">1.1.</span> <span class="toc-text">引用自定义资源</span></a></li></ol></li></ol>
+  </div>
+
+<div id="asidepart">
+<div class="closeaside"><a class="closebutton" href="#" title="隐藏侧边栏"></a></div>
+<aside class="clearfix">
+
+  
+<div class="categorieslist">
+	<p class="asidetitle">分类</p>
+		<ul>
+		
+			<li><a href="/categories/Android基础/" title="Android基础">Android基础<sup>2</sup></a></li>
+		
+			<li><a href="/categories/Git基础/" title="Git基础">Git基础<sup>1</sup></a></li>
+		
+			<li><a href="/categories/随笔/" title="随笔">随笔<sup>1</sup></a></li>
+		
+		</ul>
+</div>
+
+
+  
+  <div class="tagcloudlist">
+    <p class="asidetitle">标签云</p>
+    <div class="tagcloudlist clearfix">
+       <a href="/tags/Android/" style="font-size: 20px;">Android</a> <a href="/tags/Git/" style="font-size: 10px;">Git</a> <a href="/tags/nocode/" style="font-size: 10px;">nocode</a>
+    </div>
+  </div>
+
+
+  <div class="rsspart">
+	<a href="null" target="_blank" title="rss">RSS 订阅</a>
+</div>
+
+  <div class="linkslist">
+  <p class="asidetitle">友情链接</p>
+    <ul>
+      <li><a href="http://bluwil.github.io/" target="_blank" title="YangJian">Bluwil</a></li>
+      <li><a href="http://hexo.io" target="_blank" title="Hexo">Hexo</a></li>
+    </ul>
+</div>
+
+
+</aside>
+</div>
+			</div>
+			<footer>
+				<div id="footer" >
+	
+	<div class="line">
+		<span></span>
+		<div class="author"></div>
+	</div>
+	
+	
+	<section class="info">
+		<p> Stay Hungry Stay Foolish . <br/>
+			You Can !</p>
+	</section>
+	 
+	<div class="social-font clearfix">
+		
+		<a href="http://weibo.com/bluwil" target="_blank" title="weibo"></a>
+		
+		
+		
+		<a href="https://github.com/bluwil" target="_blank" title="github"></a>
+		
+		
+		
+	</div>
+	<!--Copyright [dates] by [author/owner] -->
+		<!--<p class="copyright">Powered by <a href="http://hexo.io" target="_blank" title="hexo">hexo</a> and Theme by <a href="https://github.com/A-limon/pacman" target="_blank" title="Pacman">Pacman</a> © 2015 
+		
+		<a href="http://bluwil.github.io" target="_blank" title="bluwil">bluwil</a>
+		
+		</p>-->
+		
+		<p class="copyright"> Copyright 2015 © by 
+		<a href="http://bluwil.github.io" target="_blank" title="bluwil">bluwil</a>
+		
+			
+			
+		</p>
+</div>
+
+			</footer>
+			<script src="/js/jquery-2.1.0.min.js"></script>
+<script type="text/javascript">
+	$(document).ready(function(){ 
+	  $('.navbar').click(function(){
+	    $('header nav').toggleClass('shownav');
+	  });
+	  var myWidth = 0;
+	  function getSize(){
+	    if( typeof( window.innerWidth ) == 'number' ) {
+	      myWidth = window.innerWidth;
+	    } else if( document.documentElement && document.documentElement.clientWidth) {
+	      myWidth = document.documentElement.clientWidth;
+	    };
+	  };
+	  var m = $('#main'),
+	      a = $('#asidepart'),
+	      c = $('.closeaside'),
+	      o = $('.openaside');
+	  $(window).resize(function(){
+	    getSize(); 
+	    if (myWidth >= 1024) {
+	      $('header nav').removeClass('shownav');
+	    }else
+	    {
+	      m.removeClass('moveMain');
+	      a.css('display', 'block').removeClass('fadeOut');
+	      o.css('display', 'none');
+	      
+	      $('#toc.toc-aside').css('display', 'none');
+	        
+	    }
+	  });
+	  c.click(function(){
+	    a.addClass('fadeOut').css('display', 'none');
+	    o.css('display', 'block').addClass('fadeIn');
+	    m.addClass('moveMain');
+	  });
+	  o.click(function(){
+	    o.css('display', 'none').removeClass('beforeFadeIn');
+	    a.css('display', 'block').removeClass('fadeOut').addClass('fadeIn');      
+	    m.removeClass('moveMain');
+	  });
+	  $(window).scroll(function(){
+	    o.css("top",Math.max(80,260-$(this).scrollTop()));
+	  });
+	});
+</script>
+
+	<script type="text/javascript">
+		$(document).ready(function(){ 
+		  var ai = $('.article-content>iframe'),
+		      ae = $('.article-content>embed'),
+		      t  = $('#toc'),
+		      h  = $('article h2')
+		      ah = $('article h2'),
+		      ta = $('#toc.toc-aside'),
+		      o  = $('.openaside'),
+		      c  = $('.closeaside');
+		  if(ai.length>0){
+		    ai.wrap('<div class="video-container" />');
+		  };
+		  if(ae.length>0){
+		   ae.wrap('<div class="video-container" />');
+		  };
+		  if(ah.length==0){
+		    t.css('display','none');
+		  }else{
+		    c.click(function(){
+		      ta.css('display', 'block').addClass('fadeIn');
+		    });
+		    o.click(function(){
+		      ta.css('display', 'none');
+		    });
+		    $(window).scroll(function(){
+		      ta.css("top",Math.max(140,320-$(this).scrollTop()));
+		    });
+		  };
+		});
+	</script>
+	
+		
+			<script type="text/javascript">
+				$(document).ready(function(){ 
+				  var $this = $('.share'),
+				      url = $this.attr('data-url'),
+				      encodedUrl = encodeURIComponent(url),
+				      title = $this.attr('data-title'),
+				      tsina = $this.attr('data-tsina');
+				  var html = [
+				  '<a href="#" class="overlay" id="qrcode"></a>',
+				  '<div class="qrcode clearfix"><span>扫描二维码分享到微信朋友圈</span><a class="qrclose" href="#share"></a><strong>Loading...Please wait</strong><img id="qrcode-pic" data-src="http://s.jiathis.com/qrcode.php?url=' + encodedUrl + '"/></div>',
+				  '<a href="#textlogo" class="article-back-to-top" title="Top"></a>',
+				  '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="article-share-facebook" target="_blank" title="Facebook"></a>',
+				  '<a href="#qrcode" class="article-share-qrcode" title="QRcode"></a>',
+				  '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="article-share-twitter" target="_blank" title="Twitter"></a>',
+				  '<a href="http://service.weibo.com/share/share.php?title='+title+'&url='+encodedUrl +'&ralateUid='+ tsina +'&searchPic=true&style=number' +'" class="article-share-weibo" target="_blank" title="Weibo"></a>',
+				  '<span title="Share to"></span>'
+				  ].join('');
+				  $this.append(html);
+				  $('.article-share-qrcode').click(function(){
+				    var imgSrc = $('#qrcode-pic').attr('data-src');
+				    $('#qrcode-pic').attr('src', imgSrc);
+				    $('#qrcode-pic').load(function(){
+				        $('.qrcode strong').text(' ');
+				    });
+				  });
+				});
+			</script>
+			
+				
+					<script type="text/javascript">
+						var duoshuoQuery = {short_name:"bluwil"};
+						  (function() {
+						    var ds = document.createElement('script');
+						    ds.type = 'text/javascript';ds.async = true;
+						    ds.src = '//static.duoshuo.com/embed.js';
+						    ds.charset = 'UTF-8';
+						    (document.getElementsByTagName('head')[0] 
+						    || document.getElementsByTagName('body')[0]).appendChild(ds);
+						  })();
+					</script>
+					
+						
+								
+										
+		</body>
+
+		</html>
+		
+																			<html>
+																			<div>a href="https://github.com/bluwil"><img style="position: absolute; top: 0; left: 0; border: 0;" src="https://camo.githubusercontent.com/c6625ac1f3ee0a12250227cf83ce904423abf351/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f6c6566745f677261795f3664366436642e706e67"
+																				alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_left_gray_6d6d6d.png"></a>
+																			</div>
+																			</html>
