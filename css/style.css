@@ -620,11 +620,12 @@ header nav ul li a:hover {
 #main section.post a p {
   color: #817c7c;
 }
-#main section.post a time {
+#main section.post a time:before,
+#main section.post a comment:before {
   color: #817c7c;
   display: block;
-  margin: 0.5em 0;
   font-size: 0.5em;
+  text-align: right;
 }
 .moveMain {
   margin-left: 10% !important;
