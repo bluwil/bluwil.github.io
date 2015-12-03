@@ -4,50 +4,23 @@
 <head>
   <meta charset="UTF-8">
   
-    <title>Android资源文件中特殊符号的含义 | Bluwil的博客</title>
+    <title>Android studio快捷键以及使用技巧 | Bluwil的博客</title>
     <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
     
     <meta name="author" content="bluwil">
     
 
     
-    <meta name="description" content="@ 代表引用资源引用自定义资源
- 格式：@[package:]type/name  
-
-android:text=&amp;quot;@String/hello&amp;quot;
-引用系统资源
- 格式：@android:type/name 
-
-android:textColor=&amp;quot;@android:color/opaque_red&amp;quot;
-
-注意：其实@android:type/name是@[pa">
+    <meta name="description" content="Android studio快捷键，Ctrl+space，快捷键冲突问题，Android studio使用小技巧。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Android资源文件中特殊符号的含义">
-<meta property="og:url" content="http://bluwil.github.io/2015/08/29/Android/Android资源文件中特殊符号的含义/index.html">
+<meta property="og:title" content="Android studio快捷键以及使用技巧">
+<meta property="og:url" content="http://bluwil.github.io/2015/12/03/Android/Android-studio快捷键/index.html">
 <meta property="og:site_name" content="Bluwil的博客">
-<meta property="og:description" content="@ 代表引用资源引用自定义资源
- 格式：@[package:]type/name  
-
-android:text=&amp;quot;@String/hello&amp;quot;
-引用系统资源
- 格式：@android:type/name 
-
-android:textColor=&amp;quot;@android:color/opaque_red&amp;quot;
-
-注意：其实@android:type/name是@[pa">
-<meta property="og:updated_time" content="2015-12-02T09:53:56.400Z">
+<meta property="og:description" content="Android studio快捷键，Ctrl+space，快捷键冲突问题，Android studio使用小技巧。">
+<meta property="og:updated_time" content="2015-12-03T17:37:49.161Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Android资源文件中特殊符号的含义">
-<meta name="twitter:description" content="@ 代表引用资源引用自定义资源
- 格式：@[package:]type/name  
-
-android:text=&amp;quot;@String/hello&amp;quot;
-引用系统资源
- 格式：@android:type/name 
-
-android:textColor=&amp;quot;@android:color/opaque_red&amp;quot;
-
-注意：其实@android:type/name是@[pa">
+<meta name="twitter:title" content="Android studio快捷键以及使用技巧">
+<meta name="twitter:description" content="Android studio快捷键，Ctrl+space，快捷键冲突问题，Android studio使用小技巧。">
 
     
     <link rel="alternative" href="/atom.xml" title="Bluwil的博客" type="application/atom+xml">
@@ -112,14 +85,14 @@ android:textColor=&amp;quot;@android:color/opaque_red&amp;quot;
 		<header class="article-info clearfix">
   <h1 itemprop="name">
     
-      <a href="/2015/08/29/Android/Android资源文件中特殊符号的含义/" title="Android资源文件中特殊符号的含义" itemprop="url">Android资源文件中特殊符号的含义</a>
+      <a href="/2015/12/03/Android/Android-studio快捷键/" title="Android studio快捷键以及使用技巧" itemprop="url">Android studio快捷键以及使用技巧</a>
   </h1>
   <p class="article-author">By
        
 		<a href="/about" title="bluwil" target="_blank" itemprop="author">bluwil</a>
 		
   <p class="article-time">
-    <time datetime="2015-08-29T10:38:06.000Z" itemprop="datePublished"> 发表于 2015-08-29</time>
+    <time datetime="2015-12-03T02:06:41.000Z" itemprop="datePublished"> 发表于 2015-12-03</time>
     
   </p>
 </header>
@@ -128,65 +101,35 @@ android:textColor=&amp;quot;@android:color/opaque_red&amp;quot;
 		<div id="toc" class="toc-article">
 			<strong class="toc-title">文章目录</strong>
 		
-			<ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#@_代表引用资源"><span class="toc-number">1.</span> <span class="toc-text">@ 代表引用资源</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#引用自定义资源"><span class="toc-number">1.1.</span> <span class="toc-text">引用自定义资源</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#引用系统资源"><span class="toc-number">1.2.</span> <span class="toc-text">引用系统资源</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#@*代表引用系统的非public资源"><span class="toc-number">2.</span> <span class="toc-text">@*代表引用系统的非public资源</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#？表示引用主题属性"><span class="toc-number">2.1.</span> <span class="toc-text">？表示引用主题属性</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#@+代表在创建或引用资源"><span class="toc-number">3.</span> <span class="toc-text">@+代表在创建或引用资源</span></a></li></ol>
+			<ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#快捷键相关问题"><span class="toc-number">1.</span> <span class="toc-text">快捷键相关问题</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#快捷键"><span class="toc-number">2.</span> <span class="toc-text">快捷键</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#很有用的快捷键"><span class="toc-number">2.1.</span> <span class="toc-text">很有用的快捷键</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Ctrl+J_自动代码"><span class="toc-number">2.2.</span> <span class="toc-text">Ctrl+J  自动代码</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#快捷键大全，"><span class="toc-number">2.3.</span> <span class="toc-text">快捷键大全，</span></a></li></ol></li></ol>
 		
 		</div>
 		
-		<h1 id="@_代表引用资源">@ 代表引用资源</h1><h2 id="引用自定义资源">引用自定义资源</h2><blockquote>
-<p><strong> 格式：@[package:]type/name </strong> </p>
-</blockquote>
-<pre><code>android:text=&quot;@String/hello&quot;
-</code></pre><h2 id="引用系统资源">引用系统资源</h2><blockquote>
-<p><strong> 格式：@android:type/name </strong></p>
-</blockquote>
-<pre><code>android:textColor=&quot;@android:color/opaque_red&quot;
-</code></pre><blockquote>
-<font color="red"><em>注意：其实@android:type/name是@[package:]type/name的一种类型 </em></font>
-
-
-</blockquote>
-<h1 id="@*代表引用系统的非public资源">@*代表引用系统的非public资源</h1><blockquote>
-<p><strong> 格式:@*android:type/name </strong> </p>
+		<h1 id="快捷键相关问题">快捷键相关问题</h1><blockquote>
+<p>关于Android studio快捷键使用说明：熟练运用快捷键，可以使我们在敲代码的时候行云流水，提高开发效率。建议使用默认快捷键而不是用Eclipse快捷键，既然已经选择了这个IDE那么就去好好熟悉她吧。</p>
 </blockquote>
 <ul>
-<li>系统资源定义分public和非public。</li>
-<li>public的声明在<sdk_path>\platforms\android-21\data\res\values\public.xml里面</sdk_path></li>
-<li>@*android:type/name:可以调用系统定义的资源</li>
-<li>@android:type/name:只能调用public属性中声明的资源<blockquote>
-<font color="red"><em>注意：没在public.xml中声明的资源是Google不推荐使用的</em></font>
-
-</blockquote>
-</li>
+<li>关于快捷键冲突问题<br>使用Android studio的时候会出现快捷键冲突导致Android studio的某些快捷键失效。尤其是搜狗输入法，解决办法是，更改其他程序的快捷键。</li>
+<li>Ctrl+space快捷键冲突,Ctrl+space效果和Eclipse中的 Alt+/一样的，然而Ctrl+space是Windows系统自带的输入法快捷键，修改办法:控制面板——＞区域语言——＞键盘和语言，在按键顺序里面找到Ctrl+space修改掉它。</li>
 </ul>
-<h2 id="？表示引用主题属性">？表示引用主题属性</h2><p>另外一种资源值允许你引用当前主题中的属性的值。这个属性值只能在style资源和XML属性中使用，它允许你通过将它们改变为当前主题提供的标准变化来改变UI元素的外观，而不是提供具体的值。例如：<br><code>android:textColor=&quot;?android:textDisabledColor&quot;</code> </p>
-<blockquote>
-<font color="red">*注意，这和资源引用非常类似，除了我们使用一个”?”前缀代替了”@”。当你使用这个标记时，你就提供了属性资源的名称，它将会在主题中被查找，所以你不需要显示声明这个类型(如果声明，其形式就是?android:attr/android:textDisabledColor)。除了使用这个资源的标识符来查询主题中的值代替原始的资源，其命名语法和”@”形式一致：?[namespace:]type/name，这里类型可选。 </font>
-
-</blockquote>
-<h1 id="@+代表在创建或引用资源">@+代表在创建或引用资源</h1><blockquote>
-<p><strong> 格式：@+type/name </strong></p>
-</blockquote>
-<p>含义：”+”表示在R.java中名为type的内部类中添加一条记录。如”@+id/button”的含义是在R.java 文件中的id 这个静态内部类添加一条常量名为button。该常量就是该资源的标识符。如果标示符（包括系统资源）已经存在则表示引用该标示符。最常用的就是在定义资源ID中，例如：</p>
-<blockquote>
-<p>@+id/资源ID名  ：新建一个资源ID<br> @id/资源ID名：应用现有已定义的资源ID，包括系统ID<br> @android:id/资源ID名：引用系统ID，其等效于@id/资源ID名</p>
-</blockquote>
-<pre><code> android:id=&quot;@+id/selectdlg&quot;
- android:id=&quot;@android:id/text1&quot;
- android:id=&quot;@id/button3&quot;
-</code></pre>  
+<h1 id="快捷键">快捷键</h1><h2 id="很有用的快捷键">很有用的快捷键</h2><p>Alt+回车 导入包,自动修正,可在setting里面设置自动导入包<br>Ctrl+N   查找类<br>Ctrl+Alt+L  格式化代码<br>Alt+Insert 生成代码(如get,set方法,构造函数等)<br>Ctrl+R 替换文本<br>Ctrl+F 查找文本<br>Ctrl+Space 代码提示<br>Ctrl+P 方法参数提示<br>Ctrl+X 删除行<br>Ctrl+D 复制行<br>Ctrl+/ 或 Ctrl+Shift+/  注释（// 或者 ）<br>Ctrl+E 最近打开的文件<br>Ctrl+H 显示类结构图<br>Ctrl+Q 显示注释文档，可在setting里面设置鼠标悬浮，显示注释文档<br>Ctrl+Alt+ left/right 返回至上次浏览的位置<br>Alt+ left/right 切换代码视图<br>Alt+ Up/Down 在方法间快速移动定位<br>Ctrl+Shift+Up/Down 代码向上/下移动。<br>F2 或Shift+F2 高亮错误或警告快速定位，Android studio中的错误不是很明显，可以用此方法定位。<br>Ctrl+Shift+Enter 光标任意位置按下这个快捷键，会在下一行创建新的空行，并且使光标在合适的位置，等同于我们把光标移动到上一行末尾然后按Enter的效果，有时还会有其他效果。</p>
+<h2 id="Ctrl+J_自动代码">Ctrl+J  自动代码</h2><p>关于自动代码，打开Setting搜索Live Templates，里面有相关的系统默认的模板，根据个人习惯也可以自行修改添加模板。<br>比如在代码声明的位置按下 logt然后回车会自动生成<br><code>private static final String TAG = &quot;MainActivity&quot;;</code><br>然后在方法体里面就不会自动生成，为什么呢？在Live Templates里面选择一个模板，然后在下方有个Change，点击它就可以修改模板生效的位置了。</p>
+<p>代码标签输入完成后，按Tab，生成代码，也可以按回车。<br>选中文本，按Ctrl+Shift+F7 ，高亮显示所有该文本，按Esc高亮消失，按Ctrl+F (查找) 可以达到同样的效果但是更加便捷。<br>Ctrl+W 选中代码，连续按会有其他效果。<br>Ctrl+Up/Down 光标跳转到第一行或最后一行下<br>Ctrl+B 快速打开光标处的类或方法或声明的对象，Ctrl+鼠标点击可以达到同样效果。</p>
+<h2 id="快捷键大全，">快捷键大全，</h2><p>不需要去记得，多熟练就好了<br>1.Ctrl＋E，可以显示最近编辑的文件列表<br>2.Shift＋Click可以关闭文件<br>3.Ctrl＋[或]可以跳到大括号的开头结尾<br>4.Ctrl＋Shift＋Backspace可以跳转到上次编辑的地方<br>5.Ctrl＋F12，可以显示当前文件的结构<br>6.Ctrl＋F7可以查询当前元素在当前文件中的引用，然后按F3可以选择<br>7.Ctrl＋N，可以快速打开类<br>8.Ctrl＋Shift＋N，可以快速打开文件<br>9.Alt＋Q可以看到当前方法的声明<br>10.Ctrl＋W可以选择单词继而语句继而行继而函数<br>11.Alt＋F1可以将正在编辑的元素在各个面板中定位<br>12.Ctrl＋P，可以显示参数信息<br>13.Ctrl＋Shift＋Insert可以选择剪贴板内容并插入<br>14.Alt＋Insert可以生成构造器/Getter/Setter等<br>15.Ctrl＋Alt＋V 可以引入变量。例如把括号内的SQL赋成一个变量<br>16.Ctrl＋Alt＋T可以把代码包在一块内，例如try/catch<br>17.Alt＋Up and Alt＋Down可在方法间快速移动<br>18.在一些地方按Alt＋Enter可以得到一些Intention Action，例如将”==”改为”equals()”<br>19.Ctrl＋Shift＋Alt＋N可以快速打开符号<br>20.Ctrl＋Shift＋Space在很多时候都能够给出Smart提示<br>21.Alt＋F3可以快速寻找<br>22.Ctrl＋/和Ctrl＋Shift＋/可以注释代码<br>23.Ctrl＋Alt＋B可以跳转到抽象方法的实现<br>24.Ctrl＋O可以选择父类的方法进行重写<br>25.Ctrl＋Q可以看JavaDoc<br>26.Ctrl＋Alt＋Space是类名自动完成<br>27.快速打开类/文件/符号时，可以使用通配符，也可以使用缩写<br>28.Live Templates! Ctrl＋J<br>29.Ctrl＋Shift＋F7可以高亮当前元素在当前文件中的使用<br>30.Ctrl＋Alt＋Up /Ctrl＋Alt＋Down可以快速跳转搜索结果<br>31.Ctrl＋Shift＋J可以整合两行<br>32.Alt＋F8是计算变量值</p>
+  
 	</div>
 		<footer class="article-footer clearfix">
 <div class="article-catetags">
 
 <div class="article-categories">
   <span></span>
-  <a class="article-category-link" href="/categories/Android基础/">Android基础</a>
+  <a class="article-category-link" href="/categories/Android/">Android</a>
 </div>
 
 
   <div class="article-tags">
   
-  <span></span> <a href="/tags/Android/">Android</a>
+  <span></span> <a href="/tags/Android-studio/">Android studio</a>
   </div>
 
 </div>
@@ -195,7 +138,7 @@ android:textColor=&amp;quot;@android:color/opaque_red&amp;quot;
 
 	<div class="article-share" id="share">
 	
-	  <div data-url="http://bluwil.github.io/2015/08/29/Android/Android资源文件中特殊符号的含义/" data-title="Android资源文件中特殊符号的含义 | Bluwil的博客" data-tsina="2879151865" class="share clearfix">
+	  <div data-url="http://bluwil.github.io/2015/12/03/Android/Android-studio快捷键/" data-title="Android studio快捷键以及使用技巧 | Bluwil的博客" data-tsina="2879151865" class="share clearfix">
 	  </div>
 	
 	</div>
@@ -208,19 +151,11 @@ android:textColor=&amp;quot;@android:color/opaque_red&amp;quot;
 	
 <nav class="article-nav clearfix">
  
- <div class="prev" >
- <a href="/2015/09/29/Android/国内Android开发牛人/" title="国内Android开发牛人">
-  <strong>上一篇：</strong><br/>
-  <span>
-  国内Android开发牛人</span>
-</a>
-</div>
-
 
 <div class="next">
-<a href="/2015/01/01/Git/Git简易教程/"  title="Git简易教程">
+<a href="/2015/11/30/日志/20151130jurnal/"  title="代码深处的水很深不怕被淹死？">
  <strong>下一篇：</strong><br/> 
- <span>Git简易教程
+ <span>代码深处的水很深不怕被淹死？
 </span>
 </a>
 </div>
@@ -229,7 +164,7 @@ android:textColor=&amp;quot;@android:color/opaque_red&amp;quot;
 
 	
 <section id="comments" class="comment">
-	<div class="ds-thread" data-thread-key="2015/08/29/Android/Android资源文件中特殊符号的含义/" data-title="Android资源文件中特殊符号的含义" data-url="http://bluwil.github.io/2015/08/29/Android/Android资源文件中特殊符号的含义/"></div>
+	<div class="ds-thread" data-thread-key="2015/12/03/Android/Android-studio快捷键/" data-title="Android studio快捷键以及使用技巧" data-url="http://bluwil.github.io/2015/12/03/Android/Android-studio快捷键/"></div>
 </section>
 
 
@@ -239,7 +174,7 @@ android:textColor=&amp;quot;@android:color/opaque_red&amp;quot;
   <div id="toc" class="toc-aside">
   <strong class="toc-title">文章目录</strong>
  
- <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#@_代表引用资源"><span class="toc-number">1.</span> <span class="toc-text">@ 代表引用资源</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#引用自定义资源"><span class="toc-number">1.1.</span> <span class="toc-text">引用自定义资源</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#引用系统资源"><span class="toc-number">1.2.</span> <span class="toc-text">引用系统资源</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#@*代表引用系统的非public资源"><span class="toc-number">2.</span> <span class="toc-text">@*代表引用系统的非public资源</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#？表示引用主题属性"><span class="toc-number">2.1.</span> <span class="toc-text">？表示引用主题属性</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#@+代表在创建或引用资源"><span class="toc-number">3.</span> <span class="toc-text">@+代表在创建或引用资源</span></a></li></ol>
+ <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#快捷键相关问题"><span class="toc-number">1.</span> <span class="toc-text">快捷键相关问题</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#快捷键"><span class="toc-number">2.</span> <span class="toc-text">快捷键</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#很有用的快捷键"><span class="toc-number">2.1.</span> <span class="toc-text">很有用的快捷键</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Ctrl+J_自动代码"><span class="toc-number">2.2.</span> <span class="toc-text">Ctrl+J  自动代码</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#快捷键大全，"><span class="toc-number">2.3.</span> <span class="toc-text">快捷键大全，</span></a></li></ol></li></ol>
  
   </div>
 
